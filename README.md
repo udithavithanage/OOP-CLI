@@ -35,7 +35,7 @@ A Java-based multithreaded system to manage a ticket pool where vendors add tick
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/udithavithanage/OOP-CLI.git
    cd OOP_CLI/src
    ```
 
