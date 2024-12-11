@@ -140,17 +140,17 @@ public class Config {
         System.out.println("\n\t\u001B[33m" + (selectedIndex+1) + " - Configuration loaded." + "\u001B[0m");
         String[] values = config.split(",");
         total_ticket_count = Integer.parseInt(values[0]);
-        System.out.println("\n\t\t\u001B[33m" + "Total ticket count:"  + total_ticket_count  + "\u001B[0m");
+        System.out.println("\n\t\t\u001B[33m" + "Total ticket count : "  + total_ticket_count  + "\u001B[0m");
         maxCapacity = Integer.parseInt(values[1]);
-        System.out.println("\t\t\u001B[33m" + "Max capacity:"  + maxCapacity  + "\u001B[0m");
+        System.out.println("\t\t\u001B[33m" + "Max capacity : "  + maxCapacity  + "\u001B[0m");
         customerRate = Integer.parseInt(values[2]);
-        System.out.println("\t\t\u001B[33m" + "Customer rate:"  + customerRate  + "\u001B[0m");
+        System.out.println("\t\t\u001B[33m" + "Customer rate : "  + customerRate  + "\u001B[0m");
         ticketReleaseRate = Integer.parseInt(values[3]);
-        System.out.println("\t\t\u001B[33m" + "Ticket release rate:"  + ticketReleaseRate  + "\u001B[0m");
+        System.out.println("\t\t\u001B[33m" + "Ticket release rate : "  + ticketReleaseRate  + "\u001B[0m");
         numberOfVendors = Integer.parseInt(values[4]);
-        System.out.println("\t\t\u001B[33m" + "Number of vendors:"  + numberOfVendors  + "\u001B[0m");
+        System.out.println("\t\t\u001B[33m" + "Number of vendors : "  + numberOfVendors  + "\u001B[0m");
         numberOfCustomers = Integer.parseInt(values[5]);
-        System.out.println("\t\t\u001B[33m" + "Number of customers:"  + numberOfCustomers  + "\u001B[0m");
+        System.out.println("\t\t\u001B[33m" + "Number of customers : "  + numberOfCustomers  + "\u001B[0m");
     }
 
     private static void requestConfiguration(Scanner input, List<String> configurations) {

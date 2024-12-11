@@ -40,6 +40,10 @@ public class Ticketpool {
             }
         }
         String ticketId = tickets.poll();
+        if(totalTicketCount==addTicketCount && tickets.isEmpty()){
+            System.out.println("\n\t\u001B[36m" + "Tickets Sold Out" + "\u001B[0m");
+            System.exit(0);
+        }
         System.out.println("\tCustomer ID: " + customerID + " Retrieved Ticket ID: " + ticketId + " | Remaining Ticket Count: " + tickets.size());
         notifyAll();
     }
