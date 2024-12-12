@@ -34,18 +34,19 @@ public class Ticketpool {
     public synchronized void removeTicket(String customerID){
         while (tickets.isEmpty()){
             try {
-                wait();
+                wait(); // Wait if the pool is full or the maximum ticket count is reached
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                Thread.currentThread().interrupt(); // Preserve interrupt status
             }
         }
         String ticketId = tickets.poll();
         if(totalTicketCount==addTicketCount && tickets.isEmpty()){
+            // Check if all tickets have been added to the ticket pool and the ticket list is empty
             System.out.println("\n\t\u001B[36m" + "Tickets Sold Out" + "\u001B[0m");
-            System.exit(0);
+            System.exit(0); // Terminate the program as there are no more tickets available
         }
         System.out.println("\tCustomer ID: " + customerID + " Retrieved Ticket ID: " + ticketId + " | Remaining Ticket Count: " + tickets.size());
-        notifyAll();
+        notifyAll(); // Notify all waiting threads
     }
 }
 

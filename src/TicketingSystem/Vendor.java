@@ -13,7 +13,7 @@ public class Vendor implements Runnable {
     @Override
     public void run(){
         while (!Thread.currentThread().isInterrupted()) {
-            pool.addTicket(this.vendorID);
+            pool.addTicket(this.vendorID); // Calls the Ticketpool's addTicket method to add a ticket
             try {
                 Thread.sleep(Vendor.ticketReleaseRate * 1000);
             } catch (InterruptedException e) {
